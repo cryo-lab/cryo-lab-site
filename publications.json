@@ -52,7 +52,7 @@
     {
         "year": "2023",
         "title": "DLPlace: A Delay-Line Clocking-Based Placement Framework for AQFP Circuits",
-        "authors": ["Author A", "Author B", "Author C"],
+        "authors": ["Rongliang Fu", "Olivia Chen", "Bei Yu", "Nobuyuki Yoshikawa", "Tsung-Yi Ho"],
         "type": "Conference",
         "journal": "",
         "conference": "ICCAD 2023",
@@ -62,7 +62,7 @@
     {
         "year": "2023",
         "title": "Exact Logic Synthesis for Reversible Quantum-Flux-Parametron Logic",
-        "authors": ["Author D", "Author E"],
+        "authors": ["Rongliang Fu", "Olivia Chen", "Nobuyuki Yoshikawa", "Tsung-Yi Ho"],
         "type": "Conference",
         "journal": "",
         "conference": "ICCAD 2023",
@@ -72,7 +72,7 @@
     {
         "year": "2023",
         "title": "BOMIG: A Majority Logic Synthesis Framework for AQFP Logic",
-        "authors": ["Author F", "Author G"],
+        "authors": ["Rongliang Fu", "Olivia Chen", "Nobuyuki Yoshikawa", "Tsung-Yi Ho"],
         "type": "Conference",
         "journal": "",
         "conference": "DATE 2023",
@@ -82,7 +82,7 @@
     {
         "year": "2023",
         "title": "A Global Optimization Algorithm for Buffer and Splitter Insertion in AQFP Circuits",
-        "authors": ["Author H", "Author I"],
+        "authors": ["Rongliang Fu", "Nobuyuki Yoshikawa", "Tsung-Yi Ho","Olivia Chen"],
         "type": "Conference",
         "journal": "",
         "conference": "ASPDAC 2023",
@@ -92,7 +92,7 @@
     {
         "year": "2022",
         "title": "TAAS: A Timing-Aware Analytical Strategy for AQFP-Capable Placement Automation",
-        "authors": ["Author J", "Author K"],
+        "authors": ["Peiyan Dong", "Yanyue Xie", "Hongjia Li", "Mengshu Sun", "Olivia Chen", "Nobuyuki Yoshikawa", "Yanzhi Wang"],
         "type": "Conference",
         "journal": "",
         "conference": "DAC 2022",
@@ -102,7 +102,7 @@
     {
         "year": "2021",
         "title": "Towards AQFP-Capable Physical Design Automation",
-        "authors": ["Author L", "Author M"],
+        "authors": ["Hongjia Li", "Mengshu Sun", "Tianyun Zhang", "Olivia Chen", "Nobuyuki Yoshikawa", "Bei Yu", "Yanzhi Wang","Yibo Lin"],
         "type": "Conference",
         "journal": "",
         "conference": "DATE 2021",
@@ -112,7 +112,7 @@
     {
         "year": "2021",
         "title": "Logic Synthesis of Sequential Logic Circuits for Adiabatic Quantum-Flux-Parametron Logic",
-        "authors": ["Author N", "Author O"],
+        "authors": ["Ro Saito", "Tomoyuki Tanaka", "Olivia Chen", "Christopher L. Ayala", "Nobuyuki Yoshikawa"],
         "type": "Journal",
         "journal": "IEEE Transactions on Applied Superconductivity",
         "conference": "",
@@ -122,7 +122,7 @@
     {
         "year": "2020",
         "title": "A Semi-Custom Design Methodology and Environment for Implementing AQFP Microprocessors",
-        "authors": ["Author P", "Author Q"],
+        "authors": ["Christopher L Ayala", "Ro Saito", "Tomoyuki Tanaka", "Olivia Chen", "Naoki Takeuchi", "Yuxing He", "Nobuyuki Yoshikawa"],
         "type": "Journal",
         "journal": "Superconductor Science and Technology",
         "conference": "",
@@ -132,7 +132,7 @@
     {
         "year": "2020",
         "title": "Asap: An Analytical Strategy for AQFP Placement",
-        "authors": ["Author R", "Author S"],
+        "authors": ["Yi-Chen Chang", "Hongjia Li", "Olivia Chen", "Yanzhi Wang", "Nobuyuki Yoshikawa", "Tsung-Yi Ho"],
         "type": "Conference",
         "journal": "",
         "conference": "ICCAD 2020",
@@ -142,7 +142,7 @@
     {
         "year": "2019",
         "title": "Adiabatic Quantum-Flux-Parametron: Towards Building Extremely Energy-Efficient Circuits and Systems",
-        "authors": ["Author T", "Author U"],
+        "authors": ["Olivia Chen", "Ruizhe Cai", "Yanzhi Wang", "Fei Ke", "Taiki Yamae", "Ro Saito", "Naoki Takeuchi", "Nobuyuki Yoshikawa"],
         "type": "Journal",
         "journal": "Scientific Reports",
         "conference": "",
