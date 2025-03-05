@@ -129,6 +129,96 @@
         function loadProgress() {
             document.getElementById("progress").style.width = "100%";
         }
+    
+        function loadPublications() {
+            fetch('publications.json')
+                .then(response => response.json())
+                .then(data => {
+                    let container = document.getElementById("publications-container");
+                    let years = {};
+    
+                    data.forEach(pub => {
+                        // If this year is not yet in the years object, initialize it with an empty array
+                        if (!years[pub.year]) {
+                            years[pub.year] = [];
+                        }
+    
+                        // Join authors into a comma-separated string
+                        let authorStr = Array.isArray(pub.authors) ? pub.authors.join(', ') : '';
+    
+                        // Determine the venue based on type (Journal vs. Conference)
+                        let venue = '';
+                        if (pub.type === 'Journal' && pub.journal) {
+                            venue = pub.journal;
+                        } else if (pub.type === 'Conference' && pub.conference) {
+                            venue = pub.conference;
+                        }
+    
+                        // Build link(s) for DOI and/or PDF
+                        let links = [];
+                        if (pub.doi) {
+                            links.push(`<a href="${pub.doi}" target="_blank">DOI</a>`);
+                        }
+                        if (pub.pdf) {
+                            links.push(`<a href="${pub.pdf}" target="_blank">PDF</a>`);
+                        }
+                        let linkHTML = links.join(' | ');
+    
+                        // Construct the publication HTML
+                        let publicationHTML = `
+                            <div class="publication">
+                                <p>${pub.title}${venue ? ' - <strong>' + venue + '</strong>' : ''}</p>
+                                ${authorStr ? `<p>${authorStr}</p>` : ''}
+                                ${linkHTML ? `<p>${linkHTML}</p>` : ''}
+                            </div>
+                        `;
+    
+                        years[pub.year].push(publicationHTML);
+                    });
+                    
+                    // Sort the years in descending order and inject into the container
+                    Object.keys(years).sort((a, b) => b - a).forEach(year => {
+                        container.innerHTML += `
+                            <div class="year-section" onclick="toggleYear('${year}')">${year} ▼</div>
+                        `;
+                        container.innerHTML += `
+                            <div class="year-publications" id="year-${year}">
+                                ${years[year].join('')}
+                            </div>
+                        `;
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading publications:', error);
+                    document.getElementById("error-message").style.display = "block";
+                });
+        }
+    
+        function toggleYear(year) {
+            let section = document.getElementById(`year-${year}`);
+            section.style.display = (section.style.display === "block") ? "none" : "block";
+        }
+    
+        typeEffect("> AUTHENTICATION REQUIRED.\n> PLEASE ENTER CREDENTIALS ██████\n> Decrypting Publications...\n", 0, () => {
+            setTimeout(loadProgress, 500);
+            setTimeout(loadPublications, 1000);
+        });
+    </script>
+    
+
+    <!-- <script>
+        function typeEffect(text, index, callback) {
+            if (index < text.length) {
+                document.getElementById("terminal-text").innerHTML += text.charAt(index);
+                setTimeout(() => typeEffect(text, index + 1, callback), 30);
+            } else {
+                callback();
+            }
+        }
+        
+        function loadProgress() {
+            document.getElementById("progress").style.width = "100%";
+        }
 
         function loadPublications() {
             fetch('publications.json')
@@ -166,7 +256,7 @@
             setTimeout(loadProgress, 500);
             setTimeout(loadPublications, 1000);
         });
-    </script>
+    </script> -->
 
 </body>
 </html>
