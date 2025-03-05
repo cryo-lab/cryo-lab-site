@@ -11,6 +11,8 @@
             font-family: 'Courier New', monospace;
             text-align: center;
             padding: 50px;
+            overflow-y: auto;
+            overflow-x: hidden;
         }
         .container {
             max-width: 60%;
@@ -19,6 +21,14 @@
             border: 2px solid #00D4FF;
             box-shadow: 0 0 15px #00D4FF;
             background: rgba(0, 0, 0, 0.85);
+
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 95%; 
+                padding: 15px; 
+                max-width: none;
+            }
         }
         h1 {
             text-transform: uppercase;
