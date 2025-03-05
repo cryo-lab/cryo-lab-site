@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members - CRYO Lab</title>
+    <style>
+        body {
+            background-color: #0D1117;
+            color: #00D4FF;
+            font-family: 'IBM Plex Mono', monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 60%;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 15px #00D4FF;
+            background: rgba(0, 0, 0, 0.85);
+        }
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 2em;
+        }
+        .member-card {
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid #00D4FF;
+            padding: 15px;
+            margin: 10px auto;
+            width: 80%;
+            text-align: left;
+            box-shadow: 0 0 10px #00D4FF;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.3s;
+            position: relative;
+        }
+        .member-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00D4FF;
+        }
+        .member-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            object-fit: cover;
+            border: 2px solid #00D4FF;
+            display: block;
+            margin: 10px auto;
+            transition: opacity 0.5s;
+        }
+        .status {
+            font-weight: bold;
+            transition: color 0.5s;
+        }
+        .member-details {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        .log-terminal {
+            background: black;
+            color: #00D4FF;
+            font-family: 'Courier New', monospace;
+            text-align: left;
+            padding: 10px;
+            margin-top: 20px;
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 10px #00D4FF;
+            height: 150px;
+            overflow-y: auto; scrollbar-width: thin; scrollbar-color: #00D4FF black;
+            font-size: 0.9em;
+        }
+        .back {
+            display: block;
+            margin-top: 20px;
+            color: #00D4FF;
+            text-decoration: none;
+            font-size: 1.2em;
+            border: 1px solid #00D4FF;
+            padding: 10px;
+            transition: all 0.3s;
+        }
+        .back:hover {
+            background: #00D4FF;
+            color: #0D1117;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 10px;
+            background-color: #00D4FF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lab Members</h1>
+        
+        <div class="member-card" onclick="toggleDetails('olivia')">
+            <img src="images/olivia_innie.jpg" alt="Olivia Chen" class="member-photo" id="photo-olivia">
+            <h3>Dr. Olivia Chen (Toyama)</h3> 
+            <p>Principal Investigator</p> 
+            
+            <p class="status" id="status-olivia">Status: Innie</p>
+            <a href="http://oliviachen.info" target="_blank" rel="noopener noreferrer" class="btn">More Info</a>
+            <div class="member-details" id="olivia">
+                <p>Specialization: Funding Hunting</p>
+                <p>Hobbies: Electromagnetic String Manipulation, Controlled External Excursions, Digital Simulation Engagement.</p>
+            </div>
+        </div>
+
+        <div class="member-card" onclick="toggleDetails('yunpeng')">
+            <img src="images/yunpeng_innie.png" alt="Yunpeng Yao" class="member-photo" id="photo-yunpeng">
+            <h3>Yunpeng Yao</h3>
+            <p>PhD Candidate & Research Associate</p>
+            <p class="status" id="status-yunpeng">Status: Outie</p>
+            <div class="member-details" id="yunpeng">
+                <p>Specialization: Superconducting Circuit Design</p>
+                <p>Hobbies: **Refining workflows, ensuring procedural compliance, and appreciating the beauty of structured documentation.**</p>
+            </div>
+        </div>
+
+        <div class="log-terminal" id="log-terminal">
+            <p>> Accessing Personnel Database...</p>
+        </div>
+
+        <a href="index.html" class="back" id="back-button">← Back to Home</a>
+    </div>
+
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    
+        function logStatusChange(name, status) {
+            var logTerminal = document.getElementById("log-terminal");
+            logTerminal.innerHTML += `<p>> ${name}: Status changed to ${status}</p>`;
+            logTerminal.scrollTop = logTerminal.scrollHeight;
+        }
+
+        function randomizeStatus() {
+            const statuses = ["Innie", "Outie"];
+            const oliviaStatus = statuses[Math.floor(Math.random() * 2)];
+            const yunpengStatus = statuses[Math.floor(Math.random() * 2)];
+            
+            document.getElementById("status-olivia").textContent = `Status: ${oliviaStatus}`;
+            document.getElementById("status-yunpeng").textContent = `Status: ${yunpengStatus}`;
+            
+            document.getElementById("photo-olivia").src = `images/olivia_${oliviaStatus.toLowerCase()}.jpg`;
+            document.getElementById("photo-yunpeng").src = `images/yunpeng_${yunpengStatus.toLowerCase()}.png`;
+            
+            logStatusChange("Dr. Olivia Chen", oliviaStatus);
+            logStatusChange("Yunpeng Yao", yunpengStatus);
+        }
+        
+        setInterval(randomizeStatus, 10000);
+    </script>
+</body>
+</html>

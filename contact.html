@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <meta name="description" content="Contact Cryo Lab - Reach out to us for inquiries.">
+    <meta name="keywords" content="Cryogenic Computing, Contact, Research Inquiries">
+    <title>Contact - CRYO Lab</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            background-color: #0D1117;
+            color: #00D4FF;
+            font-family: 'IBM Plex Mono', monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 60%;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 15px #00D4FF;
+            background: rgba(0, 0, 0, 0.85);
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 95%; 
+                padding: 15px; 
+                max-width: none;
+            }
+        }
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 2em;
+        }
+        .contact-card {
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid #00D4FF;
+            padding: 15px;
+            margin: 10px auto;
+            width: 80%;
+            text-align: left;
+            box-shadow: 0 0 10px #00D4FF;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.3s;
+            position: relative;
+        }
+        .log-terminal {
+            background: black;
+            color: #00D4FF;
+            font-family: 'Courier New', monospace;
+            text-align: left;
+            padding: 10px;
+            margin-top: 20px;
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 10px #00D4FF;
+            height: 150px;
+            overflow-y: auto; scrollbar-width: thin; scrollbar-color: #00D4FF black;
+            font-size: 0.9em;
+        }
+        .back {
+            display: block;
+            margin-top: 20px;
+            color: #00D4FF;
+            text-decoration: none;
+            font-size: 1.2em;
+            border: 1px solid #00D4FF;
+            padding: 10px;
+            transition: all 0.3s;
+        }
+        .back:hover {
+            background: hsl(190, 100%, 50%);
+            color: #0D1117;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Cryo Lab</h1>
+       
+        
+        <div class="contact-card">
+            <p>Your Outie is welcome to communicate. If you wish to join, inquire below.</h3>
+            <p>⛯ Location: Classified</p>
+            <p>☎ Phone: Secure Line Only</p>
+            <p>✉ Email: <br>
+                <img class="email-img" src="./images/email.png" alt="Contact Email" width="180px">
+            </p>
+        </div>
+        <a href="index.html" class="back" id="back-button">← Back to Home</a>
+    </div>    
+</body>
+</html>

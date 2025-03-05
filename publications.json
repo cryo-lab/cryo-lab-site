@@ -1,0 +1,223 @@
+[
+    {
+        "year": "2024",
+        "title": "SuperFlow: A Fully Customized RTL-to-GDS Design Automation Flow for AQFP Superconducting Circuits",
+        "authors": ["Yanyue Xie", "Peiyan Dong", "Geng Yuan", "Zhengang Li", "Masoud Zabihi", "Chao Wu", "Sung-En Chang", "Xufeng Zhang", "Xue Lin", "Caiwen Ding", "Nobuyuki Yoshikawa", "Olivia Chen", "Yanzhi Wang"],
+        "type": "Conference",
+        "journal": "",
+        "conference": "DATE 2024",
+        "doi": "",
+        "pdf": ""
+    },
+    {
+        "year": "2023",
+        "title": "Results from the ColdFlux Superconductor Integrated Circuit Design Tool Project",
+        "authors": ["Coenrad Fourie", "Kyle Jackman", "Johannes Delport", "Lieze Schindler", "Tessa Hall", "Pascal Febvre", "Lucas Iwanikow", "Olivia Chen", "Christopher L. Ayala", "Nobuyuki Yoshikawa", "Mark Law", "Thomas A. Weingartner", "Yanzhi Wang", "Peter Beerel", "Sandeep Gupta", "Haipeng Zha", "Sasan Razmkhah", "Mustafa Altay Karamuftuoglu", "Arash Fayyazi", "Mingye Li", "Murali Annavaram", "Shahin Nazarian", "Massoud Pedram"],
+        "type": "Journal",
+        "journal": "IEEE Transactions on Applied Superconductivity",
+        "conference": "",
+        "doi": "https://ieeexplore.ieee.org/abstract/document/10224066/",
+        "pdf": ""
+    },
+    {
+        "year": "2023",
+        "title": "DLPlace: A Delay-Line Clocking-Based Placement Framework for AQFP Circuits",
+        "authors": ["Author A", "Author B", "Author C"],
+        "type": "Conference",
+        "journal": "",
+        "conference": "ICCAD 2023",
+        "doi": "https://ieeexplore.ieee.org/abstract/document/10323698/",
+        "pdf": ""
+    },
+    {
+        "year": "2023",
+        "title": "Exact Logic Synthesis for Reversible Quantum-Flux-Parametron Logic",
+        "authors": ["Author D", "Author E"],
+        "type": "Conference",
+        "journal": "",
+        "conference": "ICCAD 2023",
+        "doi": "https://ieeexplore.ieee.org/abstract/document/10323785/",
+        "pdf": ""
+    },
+    {
+        "year": "2023",
+        "title": "BOMIG: A Majority Logic Synthesis Framework for AQFP Logic",
+        "authors": ["Author F", "Author G"],
+        "type": "Conference",
+        "journal": "",
+        "conference": "DATE 2023",
+        "doi": "https://ieeexplore.ieee.org/abstract/document/10137075/",
+        "pdf": ""
+    },
+    {
+        "year": "2023",
+        "title": "A Global Optimization Algorithm for Buffer and Splitter Insertion in AQFP Circuits",
+        "authors": ["Author H", "Author I"],
+        "type": "Conference",
+        "journal": "",
+        "conference": "ASPDAC 2023",
+        "doi": "https://dl.acm.org/doi/abs/10.1145/3566097.3567936/",
+        "pdf": ""
+    },
+    {
+        "year": "2022",
+        "title": "TAAS: A Timing-Aware Analytical Strategy for AQFP-Capable Placement Automation",
+        "authors": ["Author J", "Author K"],
+        "type": "Conference",
+        "journal": "",
+        "conference": "DAC 2022",
+        "doi": "https://dl.acm.org/doi/abs/10.1145/3489517.3530487/",
+        "pdf": ""
+    },
+    {
+        "year": "2021",
+        "title": "Towards AQFP-Capable Physical Design Automation",
+        "authors": ["Author L", "Author M"],
+        "type": "Conference",
+        "journal": "",
+        "conference": "DATE 2021",
+        "doi": "https://ieeexplore.ieee.org/abstract/document/9474259/",
+        "pdf": ""
+    },
+    {
+        "year": "2021",
+        "title": "Logic Synthesis of Sequential Logic Circuits for Adiabatic Quantum-Flux-Parametron Logic",
+        "authors": ["Author N", "Author O"],
+        "type": "Journal",
+        "journal": "IEEE Transactions on Applied Superconductivity",
+        "conference": "",
+        "doi": "https://ieeexplore.ieee.org/abstract/document/9361452/",
+        "pdf": ""
+    },
+    {
+        "year": "2020",
+        "title": "A Semi-Custom Design Methodology and Environment for Implementing AQFP Microprocessors",
+        "authors": ["Author P", "Author Q"],
+        "type": "Journal",
+        "journal": "Superconductor Science and Technology",
+        "conference": "",
+        "doi": "https://iopscience.iop.org/article/10.1088/1361-6668/ab7ec3/meta/",
+        "pdf": ""
+    },
+    {
+        "year": "2020",
+        "title": "Asap: An Analytical Strategy for AQFP Placement",
+        "authors": ["Author R", "Author S"],
+        "type": "Conference",
+        "journal": "",
+        "conference": "ICCAD 2020",
+        "doi": "https://dl.acm.org/doi/abs/10.1145/3400302.3415626/",
+        "pdf": ""
+    },
+    {
+        "year": "2019",
+        "title": "Adiabatic Quantum-Flux-Parametron: Towards Building Extremely Energy-Efficient Circuits and Systems",
+        "authors": ["Author T", "Author U"],
+        "type": "Journal",
+        "journal": "Scientific Reports",
+        "conference": "",
+        "doi": "https://www.nature.com/articles/s41598-019-46595-w/",
+        "pdf": ""
+    },
+    {
+        "year": "2019",
+        "title": "A Feedback-Friendly Large-Scale Clocking Scheme for AQFP Logic Datapaths",
+        "authors": ["Author V", "Author W"],
+        "type": "Journal",
+        "journal": "IEEE Transactions on Applied Superconductivity",
+        "conference": "",
+        "doi": ""
+    },
+        {
+            "title": "A feedback-friendly large-scale clocking scheme for AQFP logic datapaths",
+            "authors": ["N. Takeuchi", "C.L. Ayala", "O. Chen", "N. Yoshikawa"],
+            "journal": "IEEE Transactions on Applied Superconductivity",
+            "year": 2019,
+            "link": "https://ieeexplore.ieee.org/document/8666070/"
+        },
+        {
+            "title": "A buffer and splitter insertion framework for adiabatic quantum-flux-parametron superconducting circuits",
+            "authors": ["Q. Xu", "C.L. Ayala", "Y. Murai", "N. Takeuchi", "Y. Yamanashi", "N. Yoshikawa"],
+            "conference": "International Conference on Computer Design (ICCD)",
+            "year": 2019,
+            "link": "https://ieeexplore.ieee.org/document/8988605/"
+        },
+        {
+            "title": "Fabrication of AQFP integrated circuits using an automatic placement tool based on genetic algorithms",
+            "authors": ["T. Tanaka", "C.L. Ayala", "O. Chen", "R. Saito", "N. Yoshikawa"],
+            "journal": "IEEE Transactions on Applied Superconductivity",
+            "year": 2019,
+            "link": "https://ieeexplore.ieee.org/document/8643945/"
+        },
+        {
+            "title": "ColdFlux superconducting EDA and TCAD tools project: Overview and progress",
+            "authors": ["C. Fourie", "M. Botha", "P. Febvre", "C.L. Ayala", "Q. Xu", "N. Yoshikawa", "E. Patrick", "M. Law", "Y. Wang", "M. Annavaram", "P. Beerel", "S. Gupta", "S. Nazarian", "M. Pedram"],
+            "journal": "IEEE Transactions on Applied Superconductivity",
+            "year": 2019,
+            "link": "https://ieeexplore.ieee.org/document/8607085/"
+        },
+        {
+            "title": "Design of adiabatic-quantum-flux-parametron register files using a top-down design flow",
+            "authors": ["O. Chen", "R. Saito", "T. Tanaka", "C.L. Ayala", "N. Takeuchi", "N. Yoshikawa"],
+            "journal": "IEEE Transactions on Applied Superconductivity",
+            "year": 2019,
+            "link": "https://ieeexplore.ieee.org/document/8676266/"
+        },
+        {
+            "title": "Ide development logic synthesis and buffer/splitter insertion framework for AQFP superconducting circuits",
+            "authors": ["Q. Xu", "C.L. Ayala", "Y. Murai", "N. Takeuchi", "Y. Yamanashi", "N. Yoshikawa"],
+            "conference": "IEEE Computer Society Annual Symposium on VLSI (ISVLSI)",
+            "year": 2019,
+            "link": "https://ieeexplore.ieee.org/document/8839386/"
+        },
+        {
+            "title": "AQFPTX: Adiabatic quantum-flux-parametron timing eXtraction tool",
+            "authors": ["C.L. Ayala", "O. Chen", "N. Yoshikawa"],
+            "conference": "International Superconductive Electronics Conference (ISEC)",
+            "year": 2019,
+            "link": "https://ieeexplore.ieee.org/document/8990901/"
+        },
+        {
+            "title": "A majority logic synthesis framework for adiabatic quantum-flux-parametron superconducting circuits",
+            "authors": ["Q. Xu", "C.L. Ayala", "Y. Murai", "N. Takeuchi", "Y. Yamanashi", "N. Yoshikawa"],
+            "conference": "Great Lakes Symposium on VLSI (GLSVLSI)",
+            "year": 2019,
+            "link": "https://dl.acm.org/doi/abs/10.1145/3299874.3317980"
+        },
+        {
+            "title": "Synthesis flow for cell-based AQFP structural circuit generation with HDL back-end verification",
+            "authors": ["Q. Xu", "C.L. Ayala", "N. Takeuchi", "Y. Murai", "Y. Yamanashi", "N. Yoshikawa"],
+            "journal": "IEEE Transactions on Applied Superconductivity",
+            "year": 2017,
+            "link": "https://ieeexplore.ieee.org/document/7837585/"
+        },
+        {
+            "title": "HDL-based modeling approach for digital simulation of adiabatic quantum flux parametron logic",
+            "authors": ["Q. Xu", "C.L. Ayala", "N. Takeuchi", "Y. Yamanashi", "N. Yoshikawa"],
+            "journal": "IEEE Transactions on Applied Superconductivity",
+            "year": 2016,
+            "link": "https://ieeexplore.ieee.org/document/7582438/"
+        },
+        {
+            "title": "Extremely Energy-Efficient Non-Linear Function Approximation Framework Using Stochastic Superconductor Devices",
+            "authors": ["O. Chen", "R. Zhang", "W. Luo", "Y. Wang", "N. Yoshikawa"],
+            "journal": "IEEE Transactions on Emerging Topics in Computing",
+            "year": 2023,
+            "link": "https://ieeexplore.ieee.org/document/10318057/"
+        },
+        {
+            "title": "SupeRBNN: Randomized Binary Neural Network Using Adiabatic Superconductor Josephson Devices",
+            "authors": ["Z. Li", "G. Yuan", "T. Yamauchi", "M. Zabihi", "Y. Xie", "P. Dong", "X. Tang", "N. Yoshikawa", "D. Tiwari", "Y. Wang", "O. Chen"],
+            "conference": "IEEE/ACM International Symposium on Microarchitecture (MICRO)",
+            "year": 2023,
+            "link": "https://arxiv.org/abs/2309.12212"
+        },
+        {
+            "title": "Algorithm-Software-Hardware Co-Design for Deep Learning Acceleration",
+            "authors": ["O. Chen", "R. Cai", "Y. Wang", "F. Ke", "T. Yamae", "R. Saito", "N. Takeuchi", "N. Yoshikawa"],
+            "conference": "Design Automation Conference (DAC)",
+            "year": 2023,
+            "link": "https://arxiv.org/abs/2309.12212"
+        }
+]     
+    

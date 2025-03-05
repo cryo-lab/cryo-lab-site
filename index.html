@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYO Lab - Severance Style</title>
+    <!-- <style>
+        body {
+            background-color: #0D1117;
+            color: #00D4FF;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 15px #00D4FF;
+            background: rgba(0, 0, 0, 0.85);
+        }
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 1.7em;
+        }
+        .menu {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .menu a {
+            color: #00D4FF;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 8px 12px;
+            border: 1px solid #00D4FF;
+            transition: all 0.3s;
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        .menu a:hover {
+            background: #00D4FF;
+            color: #0D1117;
+            opacity: 1;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00D4FF;
+        }
+        .menu a:active {
+            box-shadow: 0 0 20px #00D4FF;
+            transform: scale(0.95);
+        }
+        .terminal {
+            background: black;
+            padding: 10px;
+            font-size: 1em;
+            text-align: left;
+            white-space: pre-line;
+            margin-top: 20px;
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 10px #00D4FF;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .terminal::-webkit-scrollbar {
+            width: 4px;
+        }
+        .terminal::-webkit-scrollbar-thumb {
+            background: #00D4FF;
+            border-radius: 5px;
+        }
+        .terminal::-webkit-scrollbar-track {
+            background: black;
+        }
+        .scanline {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 2px;
+            background: #00D4FF;
+            animation: scanline 3s linear infinite;
+        }
+        @keyframes scanline {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+    </style> -->
+    <style>
+        body {
+            background-color: #0D1117;
+            color: #00D4FF;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 20px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00D4FF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00D4FF;
+        }
+        .container {
+            max-width: 60%;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 15px #00D4FF;
+            background: rgba(0, 0, 0, 0.85);
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 95%; 
+                padding: 15px; 
+                max-width: none;
+            }
+        }
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #00D4FF;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            color: rgba(0, 212, 255, 0.8);
+            font-style: italic;
+        }
+        .menu {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+        }
+        .menu a {
+            position: relative;
+            color: #00D4FF;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 12px 5%;
+            border: 2px solid #00D4FF;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+            display: inline-block;
+            text-align: center;
+            min-width: 120px;
+            max-width: 200px;
+            overflow: hidden;
+        }
+        .menu a:hover {
+            background: #00D4FF;
+            color: #0D1117;
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #00D4FF;
+        }
+        .terminal {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 10px;
+            font-size: 1em;
+            text-align: left;
+            white-space: pre-line;
+            margin-top: 20px;
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
+            height: 300px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            max-width: 100%;
+        }
+        #terminal-text::after {
+            content: "_";
+            display: inline-block;
+            animation: blink 1s steps(2, start) infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        /* Outie Detected wanning style */
+        .warning-banner {
+            width: 60%;
+            max-width: 60%;
+            margin: 20px auto 0 auto;
+            padding: 10px 0;
+            color: #FF5555;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px rgba(255, 85, 85, 0.7);
+            overflow: hidden;
+            position: relative;
+            animation: flicker 1s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.8; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+        .scanline {
+            position: absolute;
+            top: -10%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 212, 255, 0.8);
+            box-shadow: 0 0 8px rgba(0, 212, 255, 0.8);
+            animation: scanlineMove 3s linear infinite;
+        }
+        @keyframes scanlineMove {
+            0% { top: -10%; }
+            100% { top: 110%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CRYOGENIC COMPUTING LAB</h1>
+        <p><em>Rewriting the Rules of Computing — One Kelvin at a Time.</em></p>
+        
+        <div class="menu">
+            <a href="research.html" id="research-btn">Research</a>
+            <a href="members.html" id="members-btn">Members</a>
+            <a href="publications.html" id="publications-btn">Publications</a>
+            <a href="contact.html" id="contact-btn">Contact</a>
+        </div>
+
+        <div class="terminal" id="terminal">
+            <div class="scanline"></div>
+            <span id="terminal-text"></span>
+        </div>
+    </div>
+    <div class="warning-banner" id="warning-banner">
+        ⚠ OUTIE DETECTED. Please Await Reconciliation. ⚠
+    </div>
+  
+
+    <script>
+        const terminalText = `
+> We’re Cryo Lab — redefining computing at cryogenic temperatures.
+> The work is mysterious and important.
+> Accessing Research Database...
+
+> Cryogenic Computing – Superconducting logic. Minimal energy. Maximum performance.
+> EDA for Quantum Circuits – Tools for circuits that push physics to the edge.
+> Neuromorphic Cryo Computing – AI meets superconductors.
+> Quantum-Classical Hybrid Systems – A new computing paradigm begins.
+
+> Processing...
+        `;
+        
+        let i = 0;
+        function typeEffect() {
+            if (i < terminalText.length) {
+                document.getElementById("terminal-text").innerHTML += terminalText.charAt(i);
+                i++;
+                setTimeout(typeEffect, 30);
+            }
+        }
+        
+        setTimeout(typeEffect, 1000);
+
+        // Advanced Access Animation for Members button
+        document.getElementById("members-btn").addEventListener("click", function(event) {
+            event.preventDefault();
+            this.innerText = "Verifying Access...";
+            setTimeout(() => {
+                document.getElementById("terminal-text").innerHTML += "\n> User authentication: GRANTED ✅\n";
+                this.innerText = "Members";
+                setTimeout(() => {
+                    window.location.href = "members.html";
+                }, 1000);
+            }, 1500);
+        });
+        // Advanced Access Animation for Contact button
+        document.getElementById("contact-btn").addEventListener("click", function(event) {
+            event.preventDefault();
+            this.innerText = "Verifying Access...";
+            setTimeout(() => {
+                document.getElementById("terminal-text").innerHTML += "\n> User authentication: GRANTED ✅\n";
+                this.innerText = "Contact";
+                setTimeout(() => {
+                    window.location.href = "contact.html";
+                }, 1000);
+            }, 1500);
+        });
+        // Advanced Access Animation for Research button
+        document.getElementById("research-btn").addEventListener("click", function(event) {
+            event.preventDefault();
+            this.innerText = "Verifying Access...";
+            setTimeout(() => {
+                document.getElementById("terminal-text").innerHTML += "\n> User authentication: GRANTED ✅\n";
+                this.innerText = "Research";
+                setTimeout(() => {
+                    window.location.href = "research.html";
+                }, 1000);
+            }, 1500);
+        });
+        // Advanced Access Animation for Publications button
+        document.getElementById("publications-btn").addEventListener("click", function(event) {
+            event.preventDefault();
+            this.innerText = "Verifying Access...";
+            setTimeout(() => {
+                document.getElementById("terminal-text").innerHTML += "\n> User authentication: GRANTED ✅\n";
+                this.innerText = "Publicationss";
+                setTimeout(() => {
+                    window.location.href = "publications.html";
+                }, 1000);
+            }, 1500);
+        });
+    </script>
+
+</body>
+</html> 
+

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYO Lab - Research</title>
+    <style>
+        body {
+            background-color: #0D1117;
+            color: #00D4FF;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 60%;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 15px #00D4FF;
+            background: rgba(0, 0, 0, 0.85);
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 95%; 
+                padding: 15px; 
+                max-width: 95%;
+            }
+        }
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 1.7em;
+        }
+        .terminal {
+            background: black;
+            padding: 10px;
+            font-size: 1em;
+            text-align: left;
+            white-space: pre-line;
+            margin-top: 20px;
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 10px #00D4FF;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #222;
+            margin-top: 10px;
+            position: relative;
+        }
+        .progress {
+            height: 100%;
+            width: 0;
+            background-color: #00D4FF;
+            transition: width 2s;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        img {
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 10px #00D4FF;
+        }
+        .back {
+            display: block;
+            margin-top: 20px;
+            color: #00D4FF;
+            text-decoration: none;
+            font-size: 1.2em;
+            border: 1px solid #00D4FF;
+            padding: 10px;
+            transition: all 0.3s;
+        }
+        .back:hover {
+            background: #00D4FF;
+            color: #0D1117;
+        }
+        .project {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #00D4FF;
+            background: rgba(0, 0, 0, 0.85);
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .project:hover {
+            background: rgba(0, 212, 255, 0.2);
+        }
+        .project-details {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ACTIVE RESEARCH PROJECTS</h1>
+        
+        <div class="terminal" id="terminal">
+            <p>> AUTHENTICATION REQUIRED.</p>
+            <p>> PLEASE ENTER CREDENTIALS ██████</p>
+            <p>> Decrypting Research Logs...</p>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+        
+        <div class="project" onclick="toggleDetails('project1')">
+            <p>> PROJECT: R-001 [Cryogenic AI Acceleration] 🔵</p>
+            <div class="project-details" id="project1">
+                <img src="./images/chip_image.png" alt="Cryogenic AI Acceleration" style="width:100%; max-width:400px; margin-top:10px;">
+                <p>Fabricated Superconductor AI Chip Gallery. </p>
+                <p>>> Left: 48 GHz FFT-based CNN accelerator using RSFQ technology.</p>
+                <p>>> Middle: Ultra energy efficient BNN accelerator using AQFP-based Processing-In-Memory (PIM) structure.</p>
+                <p>>> Right: Stochastic computing neural network using AQFP technology.</p>
+            </div>
+        </div>
+        <div class="project" onclick="toggleDetails('project2')">
+            <p>> PROJECT: R-002 [Quantum Chip EDA Development] 🔴</p>
+            <div class="project-details" id="project2">
+                <img src="./images/eda.png" alt="Superconducting EDA Development" style="width:100%; max-width:400px; margin-top:10px;">
+                <p>EDA development on next-generation superconducting VLSI chip design.</p>
+            </div>
+        </div>
+        <div class="project" onclick="toggleDetails('project3')">
+            <p>> PROJECT: R-003 [Cryogeic Measurement System] 🔵</p>
+            <div class="project-details" id="project3">
+                <img src="./images/measurement.png" alt="Quantum-Classical Measurement Systems" style="width:100%; max-width:400px; margin-top:10px;">
+                <p>4K measurement system using liquid helium.</p>
+            </div>
+        </div>
+        
+
+        <a href="index.html" class="back">← EXIT RESEARCH DATABASE</a>
+    </div>
+
+    <script>
+        function loadProgress() {
+            document.getElementById("progress").style.width = "100%";
+        }
+        
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            details.style.display = (details.style.display === "block") ? "none" : "block";
+        }
+        
+        setTimeout(loadProgress, 1000);
+    </script>
+</body>
+</html>

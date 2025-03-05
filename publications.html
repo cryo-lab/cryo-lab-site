@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYO Lab - Publications</title>
+    <style>
+        body {
+            background-color: #0D1117;
+            color: #00D4FF;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 60%;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 15px #00D4FF;
+            background: rgba(0, 0, 0, 0.85);
+        }
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 1.7em;
+        }
+        .terminal {
+            background: black;
+            padding: 10px;
+            font-size: 1em;
+            text-align: left;
+            white-space: pre-line;
+            margin-top: 20px;
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 10px #00D4FF;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #222;
+            margin-top: 10px;
+            position: relative;
+        }
+        .progress {
+            height: 100%;
+            width: 0;
+            background-color: #00D4FF;
+            transition: width 2s;
+        }
+        .publication {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #00D4FF;
+            background: rgba(0, 0, 0, 0.85);
+            text-align: left;
+            transition: all 0.3s;
+        }
+        .publication a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        .publication a:hover {
+            text-decoration: underline;
+        }
+        .back {
+            display: block;
+            margin-top: 20px;
+            color: #00D4FF;
+            text-decoration: none;
+            font-size: 1.2em;
+            border: 1px solid #00D4FF;
+            padding: 10px;
+            transition: all 0.3s;
+        }
+        .back:hover {
+            background: #00D4FF;
+            color: #0D1117;
+        }
+        .error-message {
+            color: red;
+            font-size: 1.1em;
+            margin-top: 20px;
+            display: none;
+        }
+        .year-section {
+            margin-top: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #00D4FF;
+            text-decoration: underline;
+        }
+        .year-publications {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RESEARCH OUTPUT ARCHIVE</h1>
+        
+        <div class="terminal" id="terminal">
+            <p id="terminal-text"></p>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+        
+        <div id="publications-container"></div>
+        <p class="error-message" id="error-message">⚠️ Error loading publications. Please check the data source.</p>
+        
+        <a href="index.html" class="back">← EXIT PUBLICATIONS DATABASE</a>
+    </div>
+
+    <script>
+        function typeEffect(text, index, callback) {
+            if (index < text.length) {
+                document.getElementById("terminal-text").innerHTML += text.charAt(index);
+                setTimeout(() => typeEffect(text, index + 1, callback), 30);
+            } else {
+                callback();
+            }
+        }
+        
+        function loadProgress() {
+            document.getElementById("progress").style.width = "100%";
+        }
+
+        function loadPublications() {
+            fetch('publications.json')
+                .then(response => response.json())
+                .then(data => {
+                    let container = document.getElementById("publications-container");
+                    let years = {};
+                    data.forEach(pub => {
+                        if (!years[pub.year]) {
+                            years[pub.year] = [];
+                        }
+                        years[pub.year].push(`<div class="publication">
+                            <p>${pub.title} - <strong>${pub.journal}</strong></p>
+                            <p><a href="${pub.doi}" target="_blank">DOI</a> | <a href="${pub.pdf}" target="_blank">PDF</a></p>
+                        </div>`);
+                    });
+                    
+                    Object.keys(years).sort((a, b) => b - a).forEach(year => {
+                        container.innerHTML += `<div class="year-section" onclick="toggleYear('${year}')">${year} ▼</div>`;
+                        container.innerHTML += `<div class="year-publications" id="year-${year}">${years[year].join('')}</div>`;
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading publications:', error);
+                    document.getElementById("error-message").style.display = "block";
+                });
+        }
+
+        function toggleYear(year) {
+            let section = document.getElementById(`year-${year}`);
+            section.style.display = (section.style.display === "block") ? "none" : "block";
+        }
+
+        typeEffect("> AUTHENTICATION REQUIRED.\n> PLEASE ENTER CREDENTIALS ██████\n> Decrypting Publications...\n", 0, () => {
+            setTimeout(loadProgress, 500);
+            setTimeout(loadPublications, 1000);
+        });
+    </script>
+</body>
+</html>
