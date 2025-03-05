@@ -153,25 +153,25 @@
             "title": "A feedback-friendly large-scale clocking scheme for AQFP logic datapaths",
             "authors": ["N. Takeuchi", "C.L. Ayala", "O. Chen", "N. Yoshikawa"],
             "type": "Journal",
-            "conference":"",
             "journal": "IEEE Transactions on Applied Superconductivity",
+            "conference":"",
             "doi": "https://ieeexplore.ieee.org/document/8666070/"
         },
         {
+            "year": 2019,
             "title": "A buffer and splitter insertion framework for adiabatic quantum-flux-parametron superconducting circuits",
             "authors": ["Q. Xu", "C.L. Ayala", "Y. Murai", "N. Takeuchi", "Y. Yamanashi", "N. Yoshikawa"],
             "type": "Conference",
-            "journal": "",
             "conference": "International Conference on Computer Design (ICCD)",
-            "year": 2019,
+            "journal": "",
             "doi": "https://ieeexplore.ieee.org/document/8988605/"
         },
         {
+            "year": 2019,
             "title": "Fabrication of AQFP integrated circuits using an automatic placement tool based on genetic algorithms",
             "authors": ["T. Tanaka", "C.L. Ayala", "O. Chen", "R. Saito", "N. Yoshikawa"],
-            "journal": "IEEE Transactions on Applied Superconductivity",
-            "year": 2019,
             "type": "Journal",
+            "journal": "IEEE Transactions on Applied Superconductivity",
             "conference":"",
             "doi": "https://ieeexplore.ieee.org/document/8643945/"
         },
@@ -179,8 +179,8 @@
             "title": "ColdFlux superconducting EDA and TCAD tools project: Overview and progress",
             "authors": ["C. Fourie", "M. Botha", "P. Febvre", "C.L. Ayala", "Q. Xu", "N. Yoshikawa", "E. Patrick", "M. Law", "Y. Wang", "M. Annavaram", "P. Beerel", "S. Gupta", "S. Nazarian", "M. Pedram"],
             "type":"Journal",
-            "conference":"",
             "journal": "IEEE Transactions on Applied Superconductivity",
+            "conference":"",
             "year": 2019,
             "doi": "https://ieeexplore.ieee.org/document/8607085/"
         },
@@ -188,8 +188,8 @@
             "title": "Design of adiabatic-quantum-flux-parametron register files using a top-down design flow",
             "authors": ["O. Chen", "R. Saito", "T. Tanaka", "C.L. Ayala", "N. Takeuchi", "N. Yoshikawa"],
             "type": "Journal",
-            "conference":"",
             "journal": "IEEE Transactions on Applied Superconductivity",
+            "conference":"",
             "year": 2019,
             "doi": "https://ieeexplore.ieee.org/document/8676266/"
         },
@@ -197,27 +197,28 @@
             "title": "Ide development logic synthesis and buffer/splitter insertion framework for AQFP superconducting circuits",
             "authors": ["Q. Xu", "C.L. Ayala", "Y. Murai", "N. Takeuchi", "Y. Yamanashi", "N. Yoshikawa"],
             "type": "Conference",
-            "journal": "",
             "conference": "IEEE Computer Society Annual Symposium on VLSI (ISVLSI)",
+            "journal": "",
             "year": 2019,
             "doi": "https://ieeexplore.ieee.org/document/8839386/"
         },
         {
+            "year": 2019,
             "title": "AQFPTX: Adiabatic quantum-flux-parametron timing eXtraction tool",
             "authors": ["C.L. Ayala", "O. Chen", "N. Yoshikawa"],
-            "conference": "International Superconductive Electronics Conference (ISEC)",
             "type": "Conference",
+            "conference": "International Superconductive Electronics Conference (ISEC)",
             "journal":"",
-            "year": 2019,
             "doi": "https://ieeexplore.ieee.org/document/8990901/"
         },
         {
+            "year": 2019,
             "title": "A majority logic synthesis framework for adiabatic quantum-flux-parametron superconducting circuits",
             "authors": ["Q. Xu", "C.L. Ayala", "Y. Murai", "N. Takeuchi", "Y. Yamanashi", "N. Yoshikawa"],
             "type": "Conference",
-            "journal": "",
             "conference": "Great Lakes Symposium on VLSI (GLSVLSI)",
-            "year": 2019,
+            "journal": "",
+
             "doi": "https://dl.acm.org/doi/abs/10.1145/3299874.3317980"
         },
         {
