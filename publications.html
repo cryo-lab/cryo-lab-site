@@ -116,7 +116,7 @@
         <a href="index.html" class="back">← EXIT PUBLICATIONS DATABASE</a>
     </div>
 
-    <!-- <script>
+    <script>
         function typeEffect(text, index, callback) {
             if (index < text.length) {
                 document.getElementById("terminal-text").innerHTML += text.charAt(index);
@@ -166,76 +166,7 @@
             setTimeout(loadProgress, 500);
             setTimeout(loadPublications, 1000);
         });
-    </script> -->
+    </script>
 
-<script>
-        function loadPublications() {
-            fetch('publications.json')
-                .then(response => response.json())
-                .then(data => {
-                    let container = document.getElementById("publications-container");
-                    let years = {};
-    
-                    data.forEach(pub => {
-                        // If this year hasn't been initialized in the years object, create an empty array
-                        if (!years[pub.year]) {
-                            years[pub.year] = [];
-                        }
-    
-                        // Convert the authors array into a comma-separated string
-                        let authors = pub.authors ? pub.authors.join(', ') : '';
-    
-                        // Determine the appropriate venue text based on publication type
-                        let venue = '';
-                        if (pub.type === 'Journal' && pub.journal) {
-                            venue = `<strong>${pub.journal}</strong>`;
-                        } else if (pub.type === 'Conference' && pub.conference) {
-                            venue = `<strong>${pub.conference}</strong>`;
-                        } else {
-                            venue = '';
-                        }
-    
-                        // Prepare DOI and PDF links
-                        let doiLink = pub.doi ? `<a href="${pub.doi}" target="_blank">DOI</a>` : '';
-                        let pdfLink = pub.pdf ? `<a href="${pub.pdf}" target="_blank">PDF</a>` : '';
-    
-                        // If both DOI and PDF exist, separate them with " | "
-                        let linksHTML = '';
-                        if (doiLink && pdfLink) {
-                            linksHTML = `${doiLink} | ${pdfLink}`;
-                        } else {
-                            linksHTML = doiLink || pdfLink;
-                        }
-    
-                        // Build the HTML for the current publication
-                        years[pub.year].push(`
-                            <div class="publication">
-                                <p>${pub.title} - ${venue}</p>
-                                <p><em>${authors}</em></p>
-                                <p>${linksHTML}</p>
-                            </div>
-                        `);
-                    });
-                    
-                    // Sort the years in descending order and append them to the container
-                    Object.keys(years).sort((a, b) => b - a).forEach(year => {
-                        container.innerHTML += `
-                            <div class="year-section" onclick="toggleYear('${year}')">${year} ▼</div>
-                        `;
-                        container.innerHTML += `
-                            <div class="year-publications" id="year-${year}">
-                                ${years[year].join('')}
-                            </div>
-                        `;
-                    });
-                })
-                .catch(error => {
-                    console.error('Error loading publications:', error);
-                    document.getElementById("error-message").style.display = "block";
-                });
-        }
-</script>
-    
-    
 </body>
 </html>
