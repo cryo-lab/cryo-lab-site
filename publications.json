@@ -18,7 +18,7 @@
         "conference": "",
         "doi": "https://iopscience.iop.org/article/10.1088/1361-6668/ad6d9e",
         "pdf": "https://iopscience.iop.org/article/10.1088/1361-6668/ad6d9e/pdf"
-    }
+    },
     {
         "year":"2024",
         "title": "Dual-mode neuron design with deterministic and non-deterministic operations using adiabatic superconductor devices",
@@ -28,7 +28,7 @@
         "journal": "Superconductor Science and Technology",
         "doi": "https://iopscience.iop.org/article/10.1088/1361-6668/ad6d9e",
         "pdf": "https://iopscience.iop.org/article/10.1088/1361-6668/ad6d9e/pdf"
-    }    
+    },    
     {
         "year": "2024",
         "title": "SuperFlow: A Fully Customized RTL-to-GDS Design Automation Flow for AQFP Superconducting Circuits",
