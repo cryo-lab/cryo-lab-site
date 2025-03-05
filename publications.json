@@ -1,12 +1,42 @@
 [
     {
         "year": "2024",
+        "title": "Buffer and Splitter Insertion for Adiabatic Quantum-Flux-Parametron Circuits",
+        "authors": ["Rongliang Fu", "Mengmeng Wang", "Yirong Kan", "Olivia Chen", "Nobuyuki Yoshikawa", "Bei Yu", "Tsung-Yi Ho"],
+        "type": "Journal",
+        "journal": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+        "conference":"",
+        "doi": "https://ieeexplore.ieee.org/abstract/document/10684033",
+        "pdf": ""
+    },
+    {
+        "year": "2024",
+        "title": "SuperSIM: a comprehensive benchmarking framework for neural networks using superconductor Josephson devices",
+        "authors": ["Guangxian Zhu", "Yirong Kan", "Renyuan Zhang", "Yasuhiko Nakashima", "Wenhui Luo", "Naoki Takeuchi", "Nobuyuki Yoshikawa", "Olivia Chen"],
+        "type": "Journal",
+        "journal": "Superconductor Science and Technology",
+        "conference": "",
+        "doi": "https://iopscience.iop.org/article/10.1088/1361-6668/ad6d9e",
+        "pdf": "https://iopscience.iop.org/article/10.1088/1361-6668/ad6d9e/pdf"
+    }
+    {
+        "year":"2024",
+        "title": "Dual-mode neuron design with deterministic and non-deterministic operations using adiabatic superconductor devices",
+        "authors": ["Tomoharu Yamauchi", "Naoki Takeuchi", "Nobuyuki Yoshikawa", "Hao San", "Olivia Chen"],
+        "type": "Journal",
+        "conference": "",
+        "journal": "Superconductor Science and Technology",
+        "doi": "https://iopscience.iop.org/article/10.1088/1361-6668/ad6d9e",
+        "pdf": "https://iopscience.iop.org/article/10.1088/1361-6668/ad6d9e/pdf"
+    }    
+    {
+        "year": "2024",
         "title": "SuperFlow: A Fully Customized RTL-to-GDS Design Automation Flow for AQFP Superconducting Circuits",
         "authors": ["Yanyue Xie", "Peiyan Dong", "Geng Yuan", "Zhengang Li", "Masoud Zabihi", "Chao Wu", "Sung-En Chang", "Xufeng Zhang", "Xue Lin", "Caiwen Ding", "Nobuyuki Yoshikawa", "Olivia Chen", "Yanzhi Wang"],
         "type": "Conference",
         "journal": "",
         "conference": "DATE 2024",
-        "doi": "",
+        "doi": "https://ieeexplore.ieee.org/document/10546680",
         "pdf": ""
     },
     {
