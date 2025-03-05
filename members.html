@@ -11,6 +11,16 @@
             font-family: 'IBM Plex Mono', monospace;
             text-align: center;
             padding: 50px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00D4FF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00D4FF;
         }
         .container {
             max-width: 60%;
@@ -35,8 +45,8 @@
         .member-card {
             background: rgba(0, 0, 0, 0.9);
             border: 2px solid #00D4FF;
-            padding: 5px;
-            margin: 5px auto;
+            padding: 15px;
+            margin: 10px auto;
             width: 80%;
             text-align: left;
             box-shadow: 0 0 10px #00D4FF;
