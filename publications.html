@@ -116,7 +116,7 @@
         <a href="index.html" class="back">← EXIT PUBLICATIONS DATABASE</a>
     </div>
 
-    <script>
+    <!-- <script>
         function typeEffect(text, index, callback) {
             if (index < text.length) {
                 document.getElementById("terminal-text").innerHTML += text.charAt(index);
@@ -166,6 +166,63 @@
             setTimeout(loadProgress, 500);
             setTimeout(loadPublications, 1000);
         });
-    </script>
+    </script> -->
+
+    <script>
+        function loadPublications() {
+            fetch('publications.json')
+                .then(response => response.json())
+                .then(data => {
+                    let container = document.getElementById("publications-container");
+                    let years = {};
+        
+                    data.forEach(pub => {
+                        // 如果该年份在 years 中还没有初始化，则先创建一个空数组
+                        if (!years[pub.year]) {
+                            years[pub.year] = [];
+                        }
+        
+                        // 将作者数组用逗号拼接起来
+                        let authorsList = pub.authors.join(', ');
+        
+                        // 只在类型为 Conference 时显示 conference 字段，为 Journal 时显示 journal 字段
+                        let venueInfo = '';
+                        if (pub.type === 'Conference' && pub.conference) {
+                            venueInfo = `<p><strong>Conference:</strong> ${pub.conference}</p>`;
+                        } else if (pub.type === 'Journal' && pub.journal) {
+                            venueInfo = `<p><strong>Journal:</strong> ${pub.journal}</p>`;
+                        }
+        
+                        // 构建每条 publication 的 HTML
+                        let publicationHTML = `
+                            <div class="publication">
+                                <p><strong>${pub.title}</strong></p>
+                                <p><strong>Authors:</strong> ${authorsList}</p>
+                                <p><strong>Type:</strong> ${pub.type}</p>
+                                ${venueInfo}
+                                <p>
+                                    ${pub.doi ? `<a href="${pub.doi}" target="_blank">DOI</a>` : ''}
+                                    ${(pub.doi && pub.pdf) ? ' | ' : ''}
+                                    ${pub.pdf ? `<a href="${pub.pdf}" target="_blank">PDF</a>` : ''}
+                                </p>
+                            </div>
+                        `;
+        
+                        years[pub.year].push(publicationHTML);
+                    });
+                    
+                    // 将年份按从大到小排序，并在页面中依次插入
+                    Object.keys(years).sort((a, b) => b - a).forEach(year => {
+                        container.innerHTML += `<div class="year-section" onclick="toggleYear('${year}')">${year} ▼</div>`;
+                        container.innerHTML += `<div class="year-publications" id="year-${year}">${years[year].join('')}</div>`;
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading publications:', error);
+                    document.getElementById("error-message").style.display = "block";
+                });
+        }
+        </script>
+        
 </body>
 </html>
