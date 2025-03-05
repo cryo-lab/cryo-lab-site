@@ -10,7 +10,17 @@
             color: #00D4FF;
             font-family: 'Courier New', monospace;
             text-align: center;
-            padding: 50px;
+            padding: 20px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00D4FF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00D4FF;
         }
         .container {
             max-width: 60%;
@@ -22,9 +32,9 @@
         }
         @media screen and (max-width: 768px) {
             .container {
-                width: 95%; 
-                padding: 15px; 
-                max-width: 95%;
+                width: 100%; 
+                padding: 5px; 
+                max-width: none;
             }
         }
         h1 {
